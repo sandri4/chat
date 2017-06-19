@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<!-- <p> -->
-    <!-- <%= image_tag @users = current_user.avatar.url(:medium) %> -->
-<!-- </p> -->
-<h1><%= @users = current_user.nickname %></h1>
-<p>Name: <%= @users = current_user.name %></p>
-<p>Surname: <%= @users = current_user.surname %></p>
+ <p>
+     <%= image_tag @users = current_user.avatar.url(:medium) %>
+ </p>
+<h1><%= @users = current_user.username %></h1>
+<p>Name: <%= @users = current_user.first_name %></p>
+<p>Surname: <%= @users = current_user.last_name %></p>
 <p>Birthday: <%= @users = current_user.birthday %></p>
 <p>Email: <%= @users = current_user.email %></p>
+

@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'profile', to: 'users/registrations#show'
   end
+  # resources :users
 end
