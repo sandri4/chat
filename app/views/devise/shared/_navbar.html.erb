@@ -1,0 +1,21 @@
+<nav class="collapse navbar-collapse navbar-inverse">
+  <form class="form-inline">
+    <div id="user_nav">
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+            <li><span class="navbar-text"><%= current_user.username %></span></li>
+            <li class="text-muted">
+              <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+            </li>
+        <% else %>
+            <li class="text-muted">
+              <%= link_to 'Войти', new_user_session_path %>
+            </li>
+            <li class="text-muted">
+              <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  </form>
+</nav>
