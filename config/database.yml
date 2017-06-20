@@ -14,5 +14,4 @@ test:
 production:
   <<: *default
   database: chat_production
-  username: chat
-  password: <%= ENV['SOCIAL_DATABASE_PASSWORD'] %>
+
