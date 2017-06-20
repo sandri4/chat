@@ -1,11 +1,18 @@
+<%= stylesheet_link_tag "profile.css" %>
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="fb-profile">
+    <img align="left" class="fb-image-lg" src="http://lorempixel.com/850/280/nightlife/5/" alt="Profile image example"/>
+    <img align="left" class="fb-image-profile thumbnail" <%= image_tag @users = current_user.avatar.url(:medium), class: 'fb-image-profile thumbnail' %>
+    <div class="fb-profile-text">
+      <h1><%= @users = current_user.username %></h1>
+      <p>Name: <%= @users = current_user.first_name %></p>
+      <p>Surname: <%= @users = current_user.last_name %></p>
+      <p>Birthday: <%= @users = current_user.birthday %></p>
+      <p>Email: <%= @users = current_user.email %></p>
+    </div>
+  </div>
+</div>
 
- <p>
-     <%= image_tag @users = current_user.avatar.url(:medium) %>
- </p>
-<h1><%= @users = current_user.username %></h1>
-<p>Name: <%= @users = current_user.first_name %></p>
-<p>Surname: <%= @users = current_user.last_name %></p>
-<p>Birthday: <%= @users = current_user.birthday %></p>
-<p>Email: <%= @users = current_user.email %></p>
+
 
