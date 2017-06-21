@@ -36,6 +36,7 @@ gem 'paperclip'
 gem 'faye'
 gem 'thin', require: false
 gem 'sync'
+gem 'redis', '~> 3.2'
 
 
 # Use Capistrano for deployment
