@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  resources :messages
   devise_for :users, controllers: {registrations: 'users/registrations'}
 
-  resources :chat_rooms, only: [:new, :create, :show, :index]
   resources :users
 
 
@@ -15,6 +15,6 @@ Rails.application.routes.draw do
 
 
 
-  root 'chat_rooms#index'
-  mount ActionCable.server => '/cable'
+  root 'messages#index'
+
 end

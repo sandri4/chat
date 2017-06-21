@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require cable
 //= require bootstrap
+//= require sync
 //= require turbolinks
