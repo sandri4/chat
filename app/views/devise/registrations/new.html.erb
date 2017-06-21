@@ -33,13 +33,27 @@
           <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Password Confirmation' %>
         </div>
         <div>
-          <%= f.file_field :avatar %>
+          <div class="full-width">
+            <input type="file" id="base-input" class="form-control form-input form-style-base"<%= f.file_field :avatar %>
+            <input type="text" id="fake-input" class="form-control form-input form-style-fake" placeholder="Avatar" readonly>
+            <span class="glyphicon glyphicon-open input-place"></span>
+          </div>
         </div>
+        <div>
+          <div class="full-width">
+            <input type="file" id="base-input" class="form-control form-input form-style-base"<%= f.file_field :background_image %>
+            <input type="text" id="fake-input" class="form-control form-input form-style-fake" placeholder="Background" readonly>
+            <span class="glyphicon glyphicon-open input-place"></span>
+          </div>
+        </div>
+
+
         <div class="actions">
           <p><%= f.submit "Sign up", class: 'btn btn-success' %></p>
+        </div>
         </div>
         <div>
     <% end %>
     </div>
-  </div>
+    </div>
 </div>

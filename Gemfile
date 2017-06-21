@@ -37,6 +37,7 @@ gem 'faye'
 gem 'thin', require: false
 gem 'sync'
 
+
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 
