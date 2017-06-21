@@ -1,6 +1,7 @@
 <nav class="collapse navbar-collapse navbar-inverse">
   <form class="form-inline">
     <div id="user_nav">
+      <%= link_to 'CableChat', root_path, class: 'navbar-brand' %>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
             <li class="text-muted">
@@ -12,14 +13,14 @@
               <%= image_tag @users = current_user.avatar.url(:thumb) %>
             </li>
             <li class="text-muted">
-              <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+              <%= link_to 'Log out', destroy_user_session_path, :method => :delete %>
             </li>
         <% else %>
             <li class="text-muted">
-              <%= link_to 'Войти', new_user_session_path %>
+              <%= link_to 'Sign in', new_user_session_path %>
             </li>
             <li class="text-muted">
-              <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+              <%= link_to 'Sign up', new_user_registration_path %>
             </li>
         <% end %>
       </ul>
