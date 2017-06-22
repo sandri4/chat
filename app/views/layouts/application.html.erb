@@ -11,6 +11,16 @@
 
   <body>
     <%= render 'devise/shared/navbar' %>
+    <% if notice %>
+    <div class="alert alert-info" role="alert" id="alert">
+      <p class='notice', align='center'><%= notice %></p>
+    </div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-danger" role="alert" id="alert">
+        <p class='alert', align='center'><%= alert %></p>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

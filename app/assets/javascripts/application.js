@@ -16,3 +16,7 @@
 //= require bootstrap
 //= require sync
 //= require turbolinks
+
+setTimeout(function() {
+    $('#alert').fadeOut('fast');
+}, 2000);

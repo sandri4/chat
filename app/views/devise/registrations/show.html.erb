@@ -3,7 +3,7 @@
 <div class="container">
   <div class="fb-profile">
     <img align="left" class="fb-image-lg" <%= image_tag @users = current_user.background_image.url(:medium), class: 'fb-image-lg' %>
-    <img align="left" class="fb-image-profile thumbnail" <%= image_tag @users = current_user.avatar.url(:medium), class: 'fb-image-profile thumbnail' %>
+    <img align="left" class="fb-image-profile thumbnail" <%= image_tag @users = current_user.avatar.url(:medium) %>
     <div class="fb-profile-text">
       <h1><%= @users = current_user.username %></h1>
       <p>Name: <%= @users = current_user.first_name %></p>
@@ -13,6 +13,3 @@
     </div>
   </div>
 </div>
-
-
-
