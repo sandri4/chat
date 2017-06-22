@@ -16,6 +16,7 @@
 //= require bootstrap
 //= require sync
 //= require turbolinks
+//= require conversations
 
 setTimeout(function() {
     $('#alert').fadeOut('fast');

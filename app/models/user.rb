@@ -6,6 +6,9 @@ class User < ApplicationRecord
 
   has_many :chat_rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
+  has_many :authored_conversations, class_name: 'Conversation', foreign_key: 'author_id'
+  has_many :received_conversations, class_name: 'Conversation', foreign_key: 'received_id'
+  has_many :personal_messages, dependent: :destroy
 
   has_attached_file :avatar, styles: {small: '40x40', medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/defaultavatar.jpg"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
