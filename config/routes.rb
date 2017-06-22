@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'chat_rooms#index'
   resources :chat_rooms, only: [:new, :create, :show, :index]
   devise_for :users, controllers: {registrations: 'users/registrations'}
+  resources :personal_messages, only: [:new, :create]
+  resources :conversations, only: [:index, :show]
   resources :users
   devise_scope :user do
     get 'profile', to: 'users/registrations#show'
@@ -9,5 +11,6 @@ Rails.application.routes.draw do
   end
 
   mount ActionCable.server => '/cable'
+
 
 end
