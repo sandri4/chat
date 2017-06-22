@@ -5,11 +5,13 @@
     <img align="left" class="fb-image-lg" <%= image_tag @users = current_user.background_image.url(:medium), class: 'fb-image-lg' %>
     <img align="left" class="fb-image-profile thumbnail" <%= image_tag @users = current_user.avatar.url(:medium) %>
     <div class="fb-profile-text">
-      <h1><%= @users = current_user.username %></h1>
-      <p>Name: <%= @users = current_user.first_name %></p>
-      <p>Surname: <%= @users = current_user.last_name %></p>
-      <p>Birthday: <%= @users = current_user.birthday.strftime("%d %B %y") %></p>
-      <p>Email: <%= @users = current_user.email %></p>
+      <div class="row col-md-5">
+        <h1><%= @users = current_user.username %></h1>
+        <p>Name: <%= @users = current_user.first_name %></p>
+        <p>Surname: <%= @users = current_user.last_name %></p>
+        <p>Birthday: <%= @users = current_user.birthday.strftime("%d %B %y") %></p>
+        <p>Email: <%= @users = current_user.email %></p>
+      </div>
     </div>
   </div>
 </div>
